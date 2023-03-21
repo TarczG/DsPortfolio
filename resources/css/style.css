@@ -1,0 +1,98 @@
+*{
+  padding: 0 0 0 0 ;
+  margin: 0 0 0 0 ;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.main{
+    height :900px;
+
+    width: 1880px;
+}
+.lewy{
+    height :100%;
+    width: 30%;
+
+    display: inline-block;
+    border-right: 1px black solid;
+    
+}
+.prawy{
+    height :900px;
+    width: 69%;
+
+    display: inline-block;
+    position: absolute;
+    top:5px;
+}
+
+.item {
+    position: relative;
+    width:100%;
+    height: 25%;
+    z-index: 10;
+    
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .higerLayer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0,0.85);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .7s ease;
+  }
+  
+  .item:hover .higerLayer {
+    width: 100%;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  .slide img{
+    height: 900px;
+    width: 100%;
+    object-fit: contain;
+    animation: nextSlide 1000ms;
+  }
+
+  #preloader{
+    height: 100%;
+    width: 100%;
+    background: #fff url(../images/preloader.gif)no-repeat center center;
+    position: fixed;
+    z-index: 80;
+}
+
+#show{
+    animation: nextSlide 1000ms;
+}
+
+  @keyframes nextSlide {
+    0%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
